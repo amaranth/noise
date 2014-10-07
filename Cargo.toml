@@ -1,0 +1,4 @@
+[package]
+name = "noise"
+version = "0.0.1"
+authors = ["Travis Watkins <amaranth@ubuntu.com>"]
