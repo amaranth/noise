@@ -44,6 +44,7 @@ impl GradientNoise {
 }
 
 impl Noise for GradientNoise {
+    #[allow(non_snake_case)]
     fn sample_1d<F: Float>(&self, x: F) -> F {
         // Find unit line that contains the point
         let X = (x.floor().to_int().unwrap() & 255) as uint;
@@ -66,6 +67,7 @@ impl Noise for GradientNoise {
         return lerp(f0, f1, u);
     }
 
+    #[allow(non_snake_case)]
     fn sample_2d<F: Float>(&self, x: F, y: F) -> F {
         // Find unit square that contains the point
         let X = (x.floor().to_int().unwrap() & 255) as uint;
@@ -105,6 +107,7 @@ impl Noise for GradientNoise {
         return bilerp(f00, f10, f01, f11, u, v);
     }
 
+    #[allow(non_snake_case)]
     fn sample_3d<F: Float>(&self, x: F, y: F, z: F) -> F {
         // Find unit cube that contains the point
         let X = (x.floor().to_int().unwrap() & 255) as uint;

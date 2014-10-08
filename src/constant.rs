@@ -28,14 +28,17 @@ impl ConstantNoise {
 }
 
 impl Noise for ConstantNoise {
+    #[allow(unused_variable)]
     fn sample_1d<F: Float>(&self, x: F) -> F {
         cast(self.value).unwrap()
     }
 
+    #[allow(unused_variable)]
     fn sample_2d<F: Float>(&self, x: F, y: F) -> F {
         cast(self.value).unwrap()
     }
 
+    #[allow(unused_variable)]
     fn sample_3d<F: Float>(&self, x: F, y: F, z: F) -> F {
         cast(self.value).unwrap()
     }
